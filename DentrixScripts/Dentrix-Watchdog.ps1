@@ -1,7 +1,8 @@
 # Paths to Dentrix executables / module files (adjust to your env)
 
 
-
+# If you need to change users go to line 67
+# Change BuiltIN\Users to whatever you need
 # Completely AI generated for full transparency mainly looking to learn and test in my own enviornment this will stop more svcs/processes 
 # and prevent users from relaunching Dentrix while maintenance is being performed # (eg. running Dentrix Utilities, DBCC CHECKDB, etc)
 
@@ -63,6 +64,7 @@ function Start-Dentrix {
 }
 
 # Add a DENY ACL for the built-in Users group to prevent non-admins executing the files
+# If you need to change Users do it here
 function Deny-ExecuteForUsers {
     param(
         [string[]]$Paths,
