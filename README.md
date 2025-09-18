@@ -1,10 +1,15 @@
-# Windows Server Automation for Dental Environments
+# Windows Server Automation for Worky
 
 Repo for a bunch of automation scripts, scripts to turn off the poopheads access to stuff when we need to (domain wide), still wip as i learn and have my buddy gpt help me like he helped for the readme i love wasting water : DDDDD
 
 > LETS MAKE OUR LIFE EASIER
 
+# Info if running via Tech Share NFS
+This has only been tested so far in my own virtual lab enviornment not a production / test enviornment with an actual client.
 
+DO NOT JUST RUN SCRIPTS AS THEY ARE STILL WIP
+
+IF YOU WANT TO CONTRIBUTE LET ME KNOW :00000
 ### Reqs
 Install powershell 7
 ```powershell
