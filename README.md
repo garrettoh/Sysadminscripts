@@ -2,10 +2,7 @@
 
 This repository contains a collection of automation scripts designed for Windows Server environments in dental practices. The primary focus is on supporting Practice Management Systems (PMS) such as Dentrix, Eaglesoft, and Carestream, while also providing general-purpose automation scripts for common administrative tasks.
 
-## Purpose
-
-Dental offices often run specialized PMS software that requires frequent maintenance, configuration, and monitoring. This repository provides automation solutions to simplify recurring tasks, reduce downtime, and improve operational efficiency for IT administrators.
-
+## LETS MAKE OUR LIFE EASIER 
 ## Features
 
 Automation scripts for starting, stopping, and restarting PMS services and modules
