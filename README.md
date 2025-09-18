@@ -16,7 +16,7 @@ To install
 winget install --id Microsoft.PowerShell --source winget
 ```
 
-You can also replace "Microsoft.Powershell" with another version you might see like "Microsoft.Powershell.Preview"
+You can also replace "Microsoft.Powershell" with another version you might see like "Microsoft.Powershell.Preview" (just not tested so idk if it works lol) 
 
 should see >=v7 if not look MSDN below
 ---
