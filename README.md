@@ -60,8 +60,8 @@ Domain admin if ur a baddie
 > Scripts can be deployed manually, through Group Policy (GPO), or with centralized management tools such as SCCM/MECM or Intune. Each script includes usage instructions and any prerequisites in the header comments. I'm prob gonna be pushing for this so we can get more work done with less stress and mistyping etc.
 ---
 ### Repository Structure
-/Dentrix
--- dentrix scripts currently only holds 
+/DentrixScripts
+-- dentrix scripts currently only holds Dentrix stop svcs script
 
 
 /Eaglesoft stuff
