@@ -1,8 +1,29 @@
 # Windows Server Automation for Dental Environments
 
-This repository contains a collection of automation scripts designed for Windows Server environments in dental practices. The primary focus is on supporting Practice Management Systems (PMS) such as Dentrix, Eaglesoft, and Carestream, while also providing general-purpose automation scripts for common administrative tasks.
+Repo for a bunch of automation scripts, scripts to turn off the poopheads access to stuff when we need to (domain wide), still wip as i learn and have my buddy gpt help me like he helped for the readme i love wasting water : DDDDD
 
-## LETS MAKE OUR LIFE EASIER 
+> LETS MAKE OUR LIFE EASIER
+
+
+### Reqs
+Install powershell 7
+```powershell
+winget search Microsoft.PowerShell
+```
+
+To install 
+```powershell
+winget install --id Microsoft.PowerShell --source winget
+```
+
+You can also replace "Microsoft.Powershell" with another version you might see like "Microsoft.Powershell.Preview"
+
+should see >=v7 if not look MSDN below
+---
+
+vvvv
+
+https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5
 ## Features
 
 Automation scripts for starting, stopping, and restarting PMS services and modules
@@ -28,16 +49,16 @@ Data Integrity: Schedule regular PMS database backup and verification tasks
 
 ## Requirements
 
-PowerShell 5.1+ (or PowerShell Core where applicable) most have pwsh7 
+PowerShell 5.1+ (or PowerShell Core where applicable -- **only tested with pwsh 7.1** but should work (hopefully))
 
 Administrative privileges on the target systems
 
-DA
+Domain admin if ur a baddie
 
-Deployment
+#### Deployment
 
 > Scripts can be deployed manually, through Group Policy (GPO), or with centralized management tools such as SCCM/MECM or Intune. Each script includes usage instructions and any prerequisites in the header comments. I'm prob gonna be pushing for this so we can get more work done with less stress and mistyping etc.
-
+---
 ### Repository Structure
 /Dentrix
 -- dentrix scripts currently only holds 
