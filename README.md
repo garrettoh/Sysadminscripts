@@ -43,16 +43,21 @@ Deployment
 
 ### Repository Structure
 /Dentrix
-    Stop-DentrixServices.ps1
-    Start-DentrixServices.ps1
-/Eaglesoft
-    Backup-EaglesoftDB.ps1
-/General
-    Restart-Services.ps1
-    User-Management.ps1
-/Deployment
-    Deploy-Script-GPO.md
-    Deploy-Script-SCCM.md
+-- dentrix scripts currently only holds 
+
+
+/Eaglesoft stuff
+-- i wanan make a backup db script
+
+
+/Carestream stuff
+-- WIP
+
+
+/General stuff 
+--i.e installing printers on multiple workstations at once 
+
+
 
 ### Contributing
 
