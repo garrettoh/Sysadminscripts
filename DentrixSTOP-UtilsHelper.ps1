@@ -1,4 +1,4 @@
-# Dentrix Maintenance Helper
+# Dentrix Maintenance Helper Look below!
 
 
 
@@ -17,7 +17,9 @@ $services = @(
     "DentrixDtxService"
 )
 
-# Define Dentrix processes that poop-heads might open
+
+# Define Dentrix processes that poop-heads might open 
+# I haven't had time to check whether or not this will stop everything required for utils to run, but this is what I have seen so far
 $processes = @(
     "Dentrix",
     "Dexis",
@@ -35,6 +37,7 @@ function Stop-Dentrix {
         }
     }
 
+
     Write-Host "`n--- Killing Dentrix Processes ---`n"
     foreach ($proc in $processes) {
         Get-Process -Name $proc -ErrorAction SilentlyContinue | ForEach-Object {
@@ -43,6 +46,7 @@ function Stop-Dentrix {
         }
     }
 }
+
 
 function Start-Dentrix {
     Write-Host "`n--- Restarting Dentrix Services ---`n"
@@ -55,6 +59,8 @@ function Start-Dentrix {
         }
     }
 }
+
+
 
 # do the scripty thingy here
 Stop-Dentrix
