@@ -1,11 +1,18 @@
-# PowerShell Script to Add 5 Network Printers by IP and Install Drivers
+
+# ================================
+# Install 5 Printers via IP + Driver
+# ================================
 # Run as Administrator
 
-# Define printer driver names (update as needed using Get-PrinterDriver)
-$hpDriver      = "HP Universal Printing PCL 6"
-$lexmarkDriver = "Lexmark Universal v2"
+# -------- Settings --------
+# Path to Lexmark .INF driver
+$lexmarkInf = "\\mil-server2k19\NFC_Staging\Printers\DR OFFICE LEXMARK M1342\Drivers\Print\GDI\LMUD1o40.inf"
 
-# Define printers (IP + Name + Driver)
+# Driver names (verify with Get-PrinterDriver after install)
+$hpDriver      = "HP Universal Printing PCL 6"
+$lexmarkDriver = "Lexmark M1342 Series GDI"   # Update if Get-PrinterDriver shows a slightly different string
+
+# Printer definitions
 $printers = @(
     @{IP="10.0.0.220"; Name="HP-FRONT-SMALL"; Driver=$hpDriver},
     @{IP="10.0.0.221"; Name="HP-FRONT-BIG";   Driver=$hpDriver},
@@ -14,9 +21,22 @@ $printers = @(
     @{IP="10.0.0.225"; Name="HP-COLOR";       Driver=$hpDriver}
 )
 
+# -------- Driver Check & Install --------
+Write-Host "Checking for Lexmark driver..."
+$lexmarkInstalled = Get-PrinterDriver | Where-Object { $_.Name -like "*Lexmark*" }
+
+if (-not $lexmarkInstalled) {
+    Write-Host "Lexmark driver not found. Installing from $lexmarkInf..."
+    pnputil /add-driver $lexmarkInf /install | Out-Null
+    Write-Host "Lexmark driver installed."
+}
+else {
+    Write-Host "Lexmark driver already installed: $($lexmarkInstalled.Name)"
+}
+
+# -------- Printer Setup --------
 foreach ($printer in $printers) {
     $portName = "IP_" + $printer.IP
-
     Write-Host "Processing $($printer.Name) at $($printer.IP)..."
 
     # Create TCP/IP port if it doesn’t exist
@@ -37,4 +57,3 @@ foreach ($printer in $printers) {
         Write-Host "  Printer $($printer.Name) already exists, skipping."
     }
 }
-
