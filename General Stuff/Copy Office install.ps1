@@ -17,7 +17,7 @@
 #>
 
 $source = "\\gre-dexis\NFC_Staging\Office 2016 STD MAK"
-$destination = Join-Path -Path $env:USERPROFILE -ChildPath "Desktop\Office install"
+$destination = Join-Path -Path $env:USERPROFILE -ChildPath "Desktop\Copied Folder"
 
 # Create the destination folder if it doesn't exist
 if (-not (Test-Path -Path $destination)) {
