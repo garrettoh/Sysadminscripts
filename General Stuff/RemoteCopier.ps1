@@ -16,7 +16,7 @@
     Copy one folder (Office 2016 installer package) to desktop / Office installs
 #>
 
-$source = "\\gre-dexis\NFC_Staging\Office 2016 STD MAK"
+$source = "\\Server\Blah\Office2016"
 $destination = Join-Path -Path $env:USERPROFILE -ChildPath "Desktop\Copied Folder"
 
 # Create the destination folder if it doesn't exist
